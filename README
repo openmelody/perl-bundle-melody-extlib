@@ -1,0 +1,27 @@
+Bundle::Melody::extlib is a bundle containing the
+prerequisite CPAN modules for running Melody
+[http://openmelody.org/] and that is commonly distributed in
+its extlib directory.
+
+INSTALLATION
+
+To install this module type the following:
+
+    perl Makefile.PL
+    make 
+    make test 
+    make install
+
+DEPENDENCIES
+
+By definition a Bundle is a list of dependencies. See the
+POD documentation in the extlib.pm module for a list of
+packages.
+
+COPYRIGHT AND LICENCE
+
+The software is released under the Artistic License. The
+terms of the Artistic License are described at
+http://www.perl.com/language/misc/Artistic.html. Except
+where otherwise noted, Bundle::Melody::extlib is Copyright
+2009, Timothy Appnel, tima@cpan.org. All rights reserved.
