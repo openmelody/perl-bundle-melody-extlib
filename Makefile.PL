@@ -3,5 +3,5 @@ use strict;
 
 WriteMakefile(
     'NAME'	=> 'Bundle::Melody::extlib',
-    'VERSION_FROM' => 'extlib.pm',
+    'VERSION_FROM' => 'lib/Bundle/Melody/extlib.pm',
 );
