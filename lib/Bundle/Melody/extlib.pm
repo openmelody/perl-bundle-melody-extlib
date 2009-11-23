@@ -38,7 +38,7 @@ C<perl -MCPAN -e "install Bundle::Melody::extlib">
  Class::Accessor 0.22
  Class::Data::Inheritable 0.06
  Class::ErrorHandler 0.01
- Class::Trigger 0.10_1
+ Class::Trigger 0.1001
  Crypt::DH 0.06
  Data::ObjectDriver 0.06
  File::Copy::Recursive 0.23
