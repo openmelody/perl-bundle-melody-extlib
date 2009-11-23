@@ -4,7 +4,7 @@ use v5.8.1;
 use strict;
 
 use vars qw($VERSION);
-$VERSION = '0.9.2_1';
+$VERSION = '0.9.6';
 
 1;
 
@@ -13,6 +13,13 @@ __END__
 =head1 NAME
 
 Bundle::Melody::extlib - A bundle containing the
+prerequisite CPAN modules for running Melody 
+and that is commonly distributed in its extlib 
+directory.
+
+=head1 ABSTRACT
+
+Bundle::Melody::extlib is a bundle containing the
 prerequisite CPAN modules for running Melody
 E<lt>http://openmelody.org/E<gt> and that is commonly
 distributed in its extlib directory.
@@ -44,7 +51,8 @@ C<perl -MCPAN -e "install Bundle::Melody::extlib">
  IPC::Cmd 0.24
  Jcode 0.88
  JSON 2.12
- Locale::Maketest 1.13
+ Log::Log4perl
+ Locale::Maketext 1.13
  Lucene::QueryParser 1.04
  LWP 5.831
  Math::BigInt 1.63
@@ -53,7 +61,7 @@ C<perl -MCPAN -e "install Bundle::Melody::extlib">
  Module::Load 0.10
  Module::Load::Conditional 0.08
  Net::OAuth 0.11
- Net::OpenID 1.03
+ Net::OpenID::Consumer 1.03
  Params::Check 0.24
  Params::Validate 0.73
  SOAP::Lite 0.710.08
@@ -76,7 +84,7 @@ commonly shipped in its extlib directory.
 
 =head1 SEE ALSO
 
-E<lt>http://openmelody.org/E<gt>
+E<lt>http://openmelody.org/E<gt>, L<Bundle::Melody::Test>
 
 =head1 PARTICIPATION
 
