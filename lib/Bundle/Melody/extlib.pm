@@ -52,6 +52,7 @@ C<perl -MCPAN -e "install Bundle::Melody::extlib">
  Jcode 0.88
  JSON 2.12
  Log::Log4perl
+ Log::Dispath
  Locale::Maketext 1.13
  Lucene::QueryParser 1.04
  LWP 5.831
@@ -64,6 +65,7 @@ C<perl -MCPAN -e "install Bundle::Melody::extlib">
  Net::OpenID::Consumer 1.03
  Params::Check 0.24
  Params::Validate 0.73
+ Sub::Install
  SOAP::Lite 0.710.08
  TheSchwartz 1.07 
  UNIVERSAL 0.11
