@@ -1,8 +1,11 @@
-\.git
+\.git[^i]
 \.old$
 \.bak$
 ^build
-^MANIFEST
-^t\b
+#^MANIFEST
+^Makefile$
+#^t\b
 test
 ^\._
+blib
+pm_to_blib
