@@ -1,5 +1,8 @@
 Revision history for Bundle::Melody::extlib:
 
+0.9.6b          Dec 09 2009
+    - Reformatted CONTENTS section for easier parsing
+
 0.9.6a		Nov 23 2009
     - Added Sub::Install and Log::Dispatch to the bundle's contents
 
