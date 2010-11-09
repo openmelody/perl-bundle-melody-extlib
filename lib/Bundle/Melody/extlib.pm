@@ -1,10 +1,10 @@
 package Bundle::Melody::extlib;
 
-use v5.8.1;
+use v5.8.8;
 use strict;
 
 use vars qw($VERSION);
-$VERSION = '0.9.6b';
+$VERSION = '0.9.29';
 
 1;
 
@@ -12,17 +12,18 @@ __END__
 
 =head1 NAME
 
-Bundle::Melody::extlib - A bundle containing the
-prerequisite CPAN modules for running Melody 
-and that is commonly distributed in its extlib 
-directory.
+Bundle::Melody::extlib - a bundle containing the CPAN
+modules bundled with Melody E<lt>http://openmelody.org/E<gt>
+and that is distributed in its extlib directory.
 
 =head1 ABSTRACT
 
-Bundle::Melody::extlib is a bundle containing the
-prerequisite CPAN modules for running Melody
-E<lt>http://openmelody.org/E<gt> and that is commonly
-distributed in its extlib directory.
+Bundle::Melody::extlib is a bundle containing the CPAN
+modules bundled with Melody E<lt>http://openmelody.org/E<gt>
+and that is distributed in its extlib directory. This bundle
+only includes modules that do not require compilation in any
+part of the depdency tree excluding modules in the core of
+Perl 5.8.8 or later.
 
 =head1 SYNOPSIS
 
@@ -30,91 +31,71 @@ C<perl -MCPAN -e "install Bundle::Melody::extlib">
 
 =head1 CONTENTS
 
-Archive::Extract 0.08
+Algorithm::Diff 1.1902 [Required]
 
-Attribute::Params::Validate 1.7
+bignum 0.17 [1]
 
-bignum 0.23 [1]
+Cache 2.04 [Required]
 
-Cache 2.04 [1]
+CGI 3.45 [1] [Required]
 
-CGI 3.45
+Class::Accessor 0.22 [Required]
 
-Class::Accessor 0.22
+Class::Data::Inheritable 0.06 [Required]
 
-Class::Data::Inheritable 0.06
-
-Class::ErrorHandler 0.01
-
-Class::Trigger 0.1001
+Class::Trigger 0.1001 [Required]
 
 Crypt::DH 0.06
 
-Data::ObjectDriver 0.06
+Data::ObjectDriver 0.06 [Required]
 
-File::Copy::Recursive 0.23
+File::Copy::Recursive 0.23 [Required]
 
-File::Temp 0.12
+Heap::Fibonacci 0.71 [Required]
 
-Heap::Fibonacci 0.71
+HTML::Diff 0.561 [Required]
 
-HTML::Template 2.8
+Image::Size 2.93 [Required]
 
-I18N::LangTags 0.35
+IO::Scalar 2.110
 
-Image::Size 2.93
+Jcode 0.88 [Required]
 
-IO::Scalar 2.110 [1]
+JSON 2.12 [Required]
 
-IPC::Cmd 0.24
+Locale::Maketext 1.13 [Required] [1]
 
-Jcode 0.88
+Log::Dispatch 2.26 [Required]
 
-JSON 2.12
+Log::Log4perl 1.3 [Required]
 
-Log::Log4perl
+Lucene::QueryParser 1.04 [Required]
 
-Log::Dispatch
+LWP 5.831 [Required]
 
-Locale::Maketext 1.13
+Mail::Sendmail
 
-Lucene::QueryParser 1.04
-
-LWP 5.831
-
-Math::BigInt 1.63
+Math::BigInt 1.63 [1]
 
 MIME::Charset 0.044
 
 MIME::EncWords 0.040
 
-Module::Load 0.10
-
-Module::Load::Conditional 0.08
-
-Net::OAuth 0.11
-
 Net::OpenID::Consumer 1.03
 
-Params::Check 0.24
+Params::Validate 0.73 [Required]
 
-Params::Validate 0.73
+Path::Class 0.21
 
-Sub::Install
+Sub::Install 0.925 [Required]
 
 SOAP::Lite 0.710.08
 
-TheSchwartz 1.07 
+TheSchwartz 1.07 [Required]
 
-UNIVERSAL 0.11
+URI 1.36 [Required]
 
-URI 1.36
-
-URI::Fetch 0.08
-
-version 0.76
-
-XML::Elemental 2.1
+version 0.76 [2] [Required]
 
 XML::NameSpaceSupport 1.09
 
@@ -122,23 +103,80 @@ XML::SAX 0.96
 
 XML::Simple 2.14
 
-YAML::Tiny 1.12
+YAML::Tiny 1.12 [Required]
  
 =head1 DESCRIPTION
 
-This bundle contains the prerequisite CPAN modules for
-running Melody E<lt>http://openmelody.org/E<gt> that is
-commonly shipped in its extlib directory.
+This bundle contains the prerequisite CPAN modules bundled
+with Melody E<lt>http://openmelody.org/E<gt> and that is
+distributed in its extlib directory. This bundle only
+includes modules that do not require compilation in any part
+of the depdency tree not incuding compiled modules that ship
+with Perl 5.8.8 or later.
 
-[1] Distributions of Melody that include this bundle's
-contents in the C<extlib> folder only come with a subset of
-these packages. This is a practice inherited from Movable
-Type to assist users who cannot install packages that
-require compilation. (Typically these users are usng FTP to
-install the software because of a lack of command line
-experience or (no) permissions.) These subsets are the pure
-Perl parts that Melody requires to operate. This excluded
-parts are not believed to effect Melody's normal operation.
+Packages requiring some type of compilation are as follows:
+
+=over 4
+
+=item Digest::SHA1 0.06 [Required]
+
+=item HTML::Parser 3.66 [Required]
+
+=item DBI 1.21 [Required]
+
+=item Archive::Tar
+
+=item Archive::Zip
+
+=item Cache::Memcached
+
+=item Crypt::DSA
+
+=item Crypt::SSLeay
+
+=item IO::Compress::Gzip
+
+=item IO::Uncompress::Gunzip
+
+=item XML::Atom
+
+=item XML::LibXML
+
+=item XML::Parser 2.23
+
+=item XML::XPath
+
+=back
+
+=head2 Database Options
+
+=over4
+
+=item DBD::mysql
+
+=item DBD::Pg 1.32
+
+=item DBD::SQLite
+
+=item DBD::SQLite2
+
+=back
+
+=head2 Graphic Manipulation Options
+
+=over 4
+
+=item Image::Magick
+
+=item netpbm via IPC::Run
+
+=item GD 
+
+=back
+
+[1] While a core module, the versions shipping with most perls are flawed.
+
+[2] We force the pure perl version of the module in creating extlib.
 
 =head1 SEE ALSO
 
@@ -146,8 +184,7 @@ E<lt>http://openmelody.org/E<gt>, L<Bundle::Melody::Test>
 
 =head1 PARTICIPATION
 
-I welcome and accept patches in diff format. If you wish to
-hack on this code, please fork the git repository found at:
+The git repository for this bundle can found at:
 L<http://github.com/tima/perl-bundle-melody-extlib/>
 
 If you have something to push back to my repository, just
@@ -161,15 +198,15 @@ visit E<lt>http://openmelody.org/E<gt>.
 
 =head1 LICENSE
 
-The software is released under the Artistic License. The terms of
-the Artistic License are described at
+The software is released under the Artistic License. The
+terms of the Artistic License are described at
 L<http://www.perl.com/language/misc/Artistic.html>.
 
 =head1 AUTHOR & COPYRIGHT
 
 Except where otherwise noted, Bundle::Melody::extlib is
-Copyright 2009, Timothy Appnel, tima@cpan.org. All rights
-reserved.
+Copyright 2009-2010, Timothy Appnel, tima@cpan.org. All
+rights reserved.
 
 =cut
 
